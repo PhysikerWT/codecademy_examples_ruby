@@ -1,0 +1,16 @@
+puts "Text to be analyzed."
+text = gets.chomp
+
+puts "Words to be redacted."
+redact = gets.chomp
+
+words = text.split(" ")
+
+words.each do |word|
+  if word == redact
+    print "REDACTED"
+  else
+    print word
+  end
+  print " "
+end
